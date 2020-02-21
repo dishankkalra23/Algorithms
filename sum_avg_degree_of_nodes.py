@@ -65,3 +65,4 @@ def cal_s(g: nx.Graph):
 
 
 s = cal_s(g)  # s: sum of average degree of nodes
+print(s)
