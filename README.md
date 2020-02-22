@@ -1,2 +1,2 @@
-# Graphs-and-Matrix
+# Graphs
 Practice Questions on Graphs
