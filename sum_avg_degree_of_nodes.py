@@ -1,8 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# using numpy.array
-# : to give two dimensional array representation
+# using networkx
+# : for creation of graphs and manipulation of networks
 
 # using pyplot from matplotlib
 # : to give visual representation of graphs generated
@@ -25,7 +25,7 @@ def add(g, i, j, w):
     g.add_edge(i, j, weight=w)
 
 
-# Evaluating sum of the average degree of nodes over the given dataset
+# Evaluating sum of the average degree of nodes with below provided data
 add(g, 1, 2, 2)
 add(g, 2, 3, 1)
 add(g, 1, 4, 1)
