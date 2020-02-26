@@ -1,2 +1,2 @@
-# Graphs
-Practice Questions on Graphs
+# Algorithms
+
