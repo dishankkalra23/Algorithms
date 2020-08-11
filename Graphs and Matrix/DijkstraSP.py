@@ -25,9 +25,7 @@ class AdjacentMatrix:
 
             for k in range(self.vertices):
                 if (self.AdjacentMatrix[finalSmall][k] > 0) and (
-                        distanceMatrix[k] > distanceMatrix[finalSmall] + self.AdjacentMatrix[finalSmall][k]) and \
-                        shortestPath[
-                            k] == False:
+                        distanceMatrix[k] > distanceMatrix[finalSmall] + self.AdjacentMatrix[finalSmall][k]) and shortestPath[k] == False:
                     distanceMatrix[k] = distanceMatrix[finalSmall] + self.AdjacentMatrix[finalSmall][k]
 
         self.pathFromSource(distanceMatrix)
@@ -39,19 +37,19 @@ class AdjacentMatrix:
             print(node, "\t\t\t\t\t\t", distanceMatrix[node])
 
 
-v = 9
-g = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
-     [4, 0, 8, 0, 0, 0, 0, 11, 0],
-     [0, 8, 0, 7, 0, 4, 0, 0, 2],
-     [0, 0, 7, 0, 9, 14, 0, 0, 0],
-     [0, 0, 0, 9, 0, 10, 0, 0, 0],
-     [0, 0, 4, 14, 10, 0, 2, 0, 0],
-     [0, 0, 0, 0, 0, 2, 0, 1, 6],
-     [8, 11, 0, 0, 0, 0, 1, 0, 7],
-     [0, 0, 2, 0, 0, 0, 6, 7, 0]
-     ]
-objectMatrix = AdjacentMatrix(v)
-objectMatrix.AdjacentMatrix = g
-for source in range(v):
+totalVertices = 9
+matrix = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+          [4, 0, 8, 0, 0, 0, 0, 11, 0],
+          [0, 8, 0, 7, 0, 4, 0, 0, 2],
+          [0, 0, 7, 0, 9, 14, 0, 0, 0],
+          [0, 0, 0, 9, 0, 10, 0, 0, 0],
+          [0, 0, 4, 14, 10, 0, 2, 0, 0],
+          [0, 0, 0, 0, 0, 2, 0, 1, 6],
+          [8, 11, 0, 0, 0, 0, 1, 0, 7],
+          [0, 0, 2, 0, 0, 0, 6, 7, 0]
+          ]
+objectMatrix = AdjacentMatrix(totalVertices)
+objectMatrix.AdjacentMatrix = matrix
+for source in range(totalVertices):
     objectMatrix.algorithmShortPath(source)
     print()
